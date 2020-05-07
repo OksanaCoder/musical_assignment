@@ -353,26 +353,26 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
                   <div class="row">
                       <div class="col-12">
                         <div class="input-group mb-3">
-                            <input type="number" class="form-control" placeholder="Track number" aria-label="Track number" aria-describedby="basic-addon2">
+                            <input type="number" class="form-control numTrack" placeholder="Track number" aria-label="Track number" aria-describedby="basic-addon2" required>
                             <div class="input-group-append">
                               <span class="input-group-text" id="basic-addon2">Track number</span>
                             </div>
                           </div>
                           
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Track name" aria-label="Track name" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control nameTrack" placeholder="Track name" aria-label="Track name" aria-describedby="basic-addon2" required>
                             <div class="input-group-append">
                               <span class="input-group-text" id="basic-addon2">Track name</span>
                             </div>
                           </div>
                           <div class="input-group mb-3">
-                            <input type="number" class="form-control" placeholder="Track lenght" aria-label="Track lenght" aria-describedby="basic-addon2">
+                            <input type="number" class="form-control lengthTrack" placeholder="Track lenght" aria-label="Track lenght" aria-describedby="basic-addon2" required>
                             <div class="input-group-append">
                               <span class="input-group-text" id="basic-addon2">Track lenght</span>
                             </div>
                           </div>
                           <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Track featuring" aria-label="Track featuring" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control featureTrack" placeholder="Track featuring" aria-label="Track featuring" aria-describedby="basic-addon2" required>
                             <div class="input-group-append">
                               <span class="input-group-text" id="basic-addon2">Track featuring</span>
                             </div>
@@ -391,12 +391,26 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
                   </div>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="close()">Close</button>
+                  <button type="button" class="btn btn-primary" onclick="add()">Save changes</button>
                 </div>
               </div>
             </div>
           </div>
+
+                    <!-- EXERCISE 11
+            Add 2 bootstrap buttons at the bottom of the modal window:
+            - Close => clear the fields and close the modal
+            - Add => Add the track to the list of tracks in the main page and display an alert success message 
+            https://getbootstrap.com/docs/4.3/components/alerts/
+            [EXTRA] Make the message disappear after 5 seconds
+            https://www.w3schools.com/jsref/met_win_settimeout.asp
+        -->
+  
+        <!-- EXERCISE 12
+            All the field (except for Feat. and Live Track) are required fields and requires validation.
+            If the user clicks on the Add button and some fields are empty, a warning alert must be show
+        -->
           <!-- - Track number
           - Track name
           - Track lenght
@@ -419,8 +433,34 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
             Use the correct Bootstrap styles for styling the buttons
             DONE!
         -->
-
-        <!-- EXERCISE 8 
+ <!-- EXERCISE 15
+            Add a Album Carousel with controls to display the top 10 albums
+        -->
+     
+  
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="img/1.jpg" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="img/2.jpg" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="img/3.jpg" alt="Third slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+   
+      <!-- EXERCISE 8 
             Add to the footer an extra column with the same links of the top nav.
         -->
         <footer class="footer-copyright text-center p-5 bg-dark text-white"> 
@@ -432,7 +472,7 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
                                 <div class="form-group">
                                 <h3>Contact Me</h3>
                                   <label for="exampleInputEmail1">Email address</label>
-                                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> 
                                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                                 </div>
                                 <div class="form-group">
@@ -463,6 +503,9 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
             </div>
         </footer>
 
+
+
+
          <!-- EXERCISE 9
             Add a button "Add Track" under the track list the album
             DONE!
@@ -480,20 +523,7 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
             DONE!
         -->
 
-        <!-- EXERCISE 11
-            Add 2 bootstrap buttons at the bottom of the modal window:
-            - Close => clear the fields and close the modal
-            - Add => Add the track to the list of tracks in the main page and display an alert success message 
-            https://getbootstrap.com/docs/4.3/components/alerts/
-            [EXTRA] Make the message disappear after 5 seconds
-            https://www.w3schools.com/jsref/met_win_settimeout.asp
-        -->
-  
-        <!-- EXERCISE 12
-            All the field (except for Feat. and Live Track) are required fields and requires validation.
-            If the user clicks on the Add button and some fields are empty, a warning alert must be show
-        -->
-
+      
         <!-- EXERCISE 13
             For each "Album cover" in your page, add a tooltip with the title
             DONE!
@@ -503,10 +533,7 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
             Update the header and footer links using scrollspy to render a smooth transition to the parts of the document.
         -->
 
-         <!-- EXERCISE 15
-            Add a Album Carousel with controls to display the top 10 albums
-        -->
-
+        
         <!-- EXERCISE 16
             Make every section of the page "collapsable" if the user clicks on the section title
         -->
@@ -609,8 +636,26 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
             }
 
             $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
+            $('[data-toggle="tooltip"]').tooltip()
+            })
+
+            let numTrack = document.querySelector('.numTrack').value;
+            var nameTrack = document.querySelector('.nameTrack').value;
+            let lengthTrack = document.querySelector('.lengthTrack').value;
+            let featureTrack = document.querySelector('.featureTrack').value;
+            function add() {
+                if (numTrack == '' &&  nameTrack == '' && lengthTrack == '' &&  featureTrack == '') {
+                    alert('Please, fill all the required filelds!');
+                    return false;
+                } else {
+                    alert('Succesfully added!');
+                    return true;
+                }
+            }
+
+            function close() {
+
+            }
         </script>
     </body>
 </html>
