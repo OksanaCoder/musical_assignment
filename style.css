@@ -1,0 +1,17 @@
+.back {
+
+    background: url('img/cover.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.img {
+    width: 100%;
+    width: 100%;
+}
+.breadcrumb {
+    background-color: black;
+    border-radius: 0%;
+}
+.breadcrumb a {
+    color: white;
+}
