@@ -1,22 +1,51 @@
-.back {
+@font-face { font-family: 'NotoSansKR-Regular'; src: url('fontawesome/webfonts/NotoSansKR-Regular.otf'); } 
 
-    background: url('img/cover.jpg') no-repeat center center fixed;
-    background-size: cover;
+body {
+    background-color: #F7F7F7;
+    font-family: 'NotoSansKR-Regular', sans-serif;
 }
 
+.back {
+    padding-top: 100px;
+}
+.align-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-link, 
+.navbar-brand {
+    color: #000 !important;
+}
+.nav-item {
+    margin-left: 40px;
+}
+.navbar-toggler  {
+    color: #fff !important;
+    border: none !important;
+}
 .img {
     width: 100%;
     width: 100%;
 }
-.breadcrumb {
-    background-color: black;
-    border-radius: 0%;
+/* nav {
+    background-color: none !important;
 }
+.breadcrumb {
+    background-color: none !important;
+    border: none;
+} */
 .breadcrumb a {
     color: white;
 }
+tr th:last-child, 
+tr td:last-child {
+    text-align: center;
+}
 .card {
     margin-bottom: 20px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 .card-body { 
     padding: 5px 10px 10px;
@@ -24,10 +53,19 @@
 .card h5 {
     font-size: 15px;
 }
+h2 {
+    font-weight: 800;
+}
 .badge {
     margin-bottom: 5px;
 }
-
+.gallery {
+    background: url('img/spot.png') top left no-repeat;
+    margin-top: 100px;
+}
+.carousel-item img {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
 @media (min-width: 768px) and (max-width: 991px) {
     /* Show 3rd slide on md  if col-md-4*/
           .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {

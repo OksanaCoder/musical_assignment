@@ -1,23 +1,5 @@
 <!DOCTYPE html>
-<!--
-ASSIGNMENT RULES
-- The solution must be pushed to the repository and be available for the tutors by the end of the day
-- You can ask for tutor's help
-- You can google / use StackOverflow BUT we suggest you to use just the material provided
-- To test the page, just open it with your default browser.
-- Use Bootstrap4 classes to render the page.
-- Use correctly containers and rows in order to have a great display
-ASSIGNMENT TOPIC 
-You are creating a website to showcase your favourite albums.
-In this page you'd like to have a short bio of yourself, the top albums of your life, 
-the worst album you ever listen to and everything related to the music you love.
-IMPORTANT:
-Start from the previous assignment
-NOTE:
-Most of the time, even the most expert of designers, need inspiration.
-Spend 30 minutes surfing the web and searching for the way of rapresenting album that you like the most.
-Could be the Amazon way, the Spotity or Apple music way or some other blog out there.
--->
+
 
 <html>
     <head>
@@ -26,53 +8,79 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
          <link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
-         /* PREVIOUS STUFF */
+       
         </style>
     </head>
     <body>
-      <!-- EXERCISE 1
-        Use the specific bootstrap component to implement a Breadcrumb
-        -->
-     
-         <nav aria-label="breadcrumb">
-            <ol class="breadcrumb mb-0">
-              <li class="breadcrumb-item active" aria-current="page">Home</li>
-              <li class="breadcrumb-item" ><a href="#">My music</a></li>
-              <li class="breadcrumb-item" ><a href="#">Album gallery</a></li>
-              <li class="breadcrumb-item" ><a href="#">Top album</a></li>
-              <li class="breadcrumb-item" ><a href="#">Top singer</a></li>
-            </ol>
-          </nav>
-        <div class="container-fluid p-0">
-            <div class="row">
-                <div class="col-12">
-                 <div class="jumbotron back text-white text-center" style="border-radius: 0%; height: 400px;">
-                <!-- <img src="data:image/jpeg;base64,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" alt="logo" width="60%"> -->
-                <div class="container d-flex justify-content-center align-items-end" style=" height:100%">
-              
-                  <a class="btn btn-dark" href="#" role="button" style="background-color: black; border: none; ">Learn more<i class="fa fa-diamond pl-2" aria-hidden="true"></i></a>
+    
+        <div class="container-fluid back p-0">
+         
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light" style="padding-top: 10px;">
+                    <a class="navbar-brand" href="#" style="background-color: black; border: none; border-radius: 40px;"></a><i class="fa fa-diamond pl-2 mr-1" aria-hidden="true"></i>STAYtuned</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">My music</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Album gallery</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Top album</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Top singer</a>
+                          </li>
+                       
+                      </ul>
+                   
+                    </div>
+                  </nav>
+            
                
+                    <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+                
+
+                    <div class="row back align-center">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <h2 style="font-weight: 6s00;">Dance to the rhythm of your heart.</h2>
+                            <h6>Let the Music Speak!</h6>
+                            <a class="btn btn-dark mt-3" href="#" role="button" style="background-color: black; border: none; border-radius: 40px;">Learn more<i class="fa fa-diamond pl-2" aria-hidden="true"></i></a> 
+                            <img src='img/band.png' width="100px"/>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <img src='img/back.png' style="width: 100%;"/>
+                        </div>
+                    </div>
+
+
+           
+              
                 </div>
-           </div>
-        </div>
-    </div>
-</div>             
-        <!-- EXERCISE 3
-            Foreach album in the favorite list, place the genre inside a badge
-        -->
+
+              </div>
+
         <section class="gallery">
             <div class="container-md">
                 <div class="row">
                     <div class="col-12">
                         <div class="text-center pb-5">
-                            <h2 data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Album Gallery</h2>
+                            <h4 data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Album Gallery</h4>
                         </div>
                     </div>
                 </div>
                 
                 <div class="row" id="collapseExample">
                     <!-- Single Album Area -->
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="col-sm-6 col-md-6 col-lg-3">
                         <div class="card">
                             <img alt="picture" src="img/1.jpg" class="img card-img-top" data-toggle="tooltip" data-placement="top" title="AC/DC - Back in Black">
                                 <!-- Play Icon -->
@@ -81,13 +89,9 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
                                    <h5 class="card-title">AC/DC - Back in Black</h5>
                                 </div>
                             </div>
-                            <!-- <div class="album-info">
-                                <a href="#">
-                                    <h6>Led Zeppelin – Led Zeppelin</h6>
-                                <a></a>
-                            </div> -->
+                          
                      </div>
-                     <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                     <div class="col-sm-6 col-md-6 col-lg-3">
                         <div class="card">
                             <img alt="picture" src="img/2.jpg" class="img card-img-top" data-toggle="tooltip" data-placement="top" title="Led Zeppelin – Led Zeppelin">
                                 <!-- Play Icon -->
@@ -96,13 +100,10 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
                                    <h5 class="card-title">Led Zeppelin – Led Zeppelin</h5>
                                 </div>
                             </div>
-                            <!-- <div class="album-info">
-                                <a href="#">
-                                    <h6>Led Zeppelin – Led Zeppelin</h6>
-                                <a></a>
-                            </div> -->
+                         
                      </div>
-                     <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                   
+                     <div class="col-sm-6 col-md-6 col-lg-3">
                         <div class="card">
                             <img alt="picture" src="img/3.jpg" class="img card-img-top" data-toggle="tooltip" data-placement="top" title="Madonna – True Blue">
                                 <!-- Play Icon -->
@@ -113,13 +114,10 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
                                  </div>
                             
                             </div>
-                            <!-- <div class="album-info">
-                                <a href="#">
-                                    <h6>Madonna – True Blue</h6>
-                                <a></a>
-                            </div> -->
+                           
                      </div>
-                     <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                 
+                     <div class="col-sm-6 col-md-6 col-lg-3">
                         <div class="card">
                             <img alt="picture" src="img/4.jpg" class="img card-img-top" data-toggle="tooltip" data-placement="top" title="The Clash – London Calling">
                                 <!-- Play Icon -->
@@ -130,9 +128,10 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
                                 </div>
                             
                             </div>
-                    
+                        </div>
                      </div>
-                     <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                     <div class="row">
+                     <div class="col-sm-6 col-md-6 col-lg-3">
                         <div class="card">
                             <img alt="picture" src="img/5.jpg" class="img card-img-top" data-toggle="tooltip" data-placement="top" title="David Bowie – Aladdin Sane">
                                 <!-- Play Icon -->
@@ -141,9 +140,11 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
                                      <h5 class="card-title">David Bowie – Aladdin Sane</h5>           
                                 </div>
                             </div>
-                        
-                     </div>
-                     <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                        </div>
+                   
+
+                     
+                     <div class="col-sm-6 col-md-6 col-lg-3">
                         <div class="card">
                             <img alt="picture" src="img/6.jpg" class="img card-img-top" data-toggle="tooltip" data-placement="top" title="The Notorious BIG – Ready to Die">
                                 <!-- Play Icon -->
@@ -153,7 +154,9 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
                                 </div>                   
                             </div>
                      </div>
-                     <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+               
+                
+                     <div class="col-sm-6 col-md-6 col-lg-3">
                         <div class="card">
                             <img alt="picture" src="img/7.jpg" class="img card-img-top" data-toggle="tooltip" data-placement="top" title="Nas – Illmatic">
                                 <!-- Play Icon -->
@@ -163,7 +166,7 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
                                 </div>  
                             </div>
                      </div>
-                     <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                     <div class="col-sm-6 col-md-6 col-lg-3">
                         <div class="card">
                             <img alt="picture" src="img/8.jpg" class="img card-img-top" data-toggle="tooltip" data-placement="top" title="Kate Bush – The Dreamingp">
                                 <!-- Play Icon -->
@@ -173,7 +176,9 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
                                 </div>  
                             </div>
                      </div>
-                     <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+            </div>
+            <div class="row">
+                     <div class="col-sm-6 col-md-6 col-lg-3">
                         <div class="card">
                             <img alt="picture" src="img/9.jpg" class="img card-img-top" data-toggle="tooltip" data-placement="top" title="Oasis – Definitely Maybe">
                                 <!-- Play Icon -->
@@ -183,7 +188,8 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
                                 </div>  
                             </div>
                      </div>
-                     <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+               
+                     <div class="col-sm-6 col-md-6 col-lg-3">
                         <div class="card">
                             <img alt="picture" src="img/10.jpg" class="img card-img-top" data-toggle="tooltip" data-placement="top" title="Rolling Stones – Sticky Fingers">
                                 <!-- Play Icon -->
@@ -194,7 +200,7 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
                             </div>
                          
                      </div>
-                     <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                     <div class="col-sm-6 col-md-6 col-lg-3">
                         <div class="card">
                             <img alt="picture" src="img/11.jpg" class="img card-img-top" data-toggle="tooltip" data-placement="top" title="Miles Davis – Bitches Brew">
                                 <!-- Play Icon -->
@@ -204,7 +210,9 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
                                 </div>  
                             </div>
                      </div>
-                     <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+             
+              
+                     <div class="col-sm-6 col-md-6 col-lg-3">
                         <div class="card">               
                             <img alt="picture" src="img/12.jpeg" class="img card-img-top" data-toggle="tooltip" data-placement="top" title="Patti Smith – Horses">
                                 <!-- Play Icon -->
@@ -214,37 +222,27 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
                                 </div>  
                             </div>
                      </div>
+                    </div>
                  </div>
             </div>
             </section>
 
-        <!-- EXERCISE 4
-            Foreach album in the favorite list, use the Bootstrap Card to contain it.
-            Use card layouts to format it in the best and more compatible way.
-        -->
-
-        <!-- EXERCISE 5
-            Place the tracklist inside a Bootstrap table.
-            The row column must be alternate.
-            Use one column for the track order, one of the title and one for the length.
-            (If you want, you can also add extra columns)
-        -->
 
         <section class="album">
             <div class="container-md">
                 <div class="row">
                     <div class="col-12">
                         <div class="text-center p-5">
-                            <h2 data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">Elena Vaenga - Tracklist</h2>
+                            <h4 data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">Elena Vaenga - Tracklist</h4>
                         </div>
                     </div>
                 </div>
                <div class="row" id="collapseExample2">
-                   <div class="col-lg-6 col-sm-12 col-md-6 ">
+                   <div class="col-lg-6 col-md-12  col-sm-12" style="text-align: center; margin-bottom: 30px;">
                      <img src="img/album.jpg" style="max-width: 100%;">
                    </div>
                    
-                   <div class="col-lg-6 col-md-4 col-sm-12 col-md-4 ">
+                   <div class="col-lg-6 col-md-12 col-sm-12">
                     <table class="table">
                         <thead>
                           <tr>
@@ -315,98 +313,12 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
                         </tbody>
                       </table>
                    </div>
-                   <button type="button" class="btn btn-secondary btn-lg btn-block m-4" data-toggle="modal" data-target="#exampleModal">Add track</button>
                 </div>
             </div>
         </section>
-        
-        
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">New Track</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <div class="row">
-                      <div class="col-12">
-                        <form>
-                            <div class="form-group">
-                              <label for="numTrack">Track number</label>
-                              <input type="number" class="form-control" id="numTrack" aria-describedby="number" placeholder="Track number">
-                            </div>
-                            <div class="form-group">
-                              <label for="nameTrack">Track name</label>
-                              <input type="text" class="form-control" id="nameTrack" placeholder="Track name">
-                            </div>
-                            <div class="form-group">
-                                <label for="nameTrack">Track length</label>
-                                <input type="number" class="form-control" id="lengthTrack" placeholder="Track length">
-                              </div>
-                              <div class="form-group">
-                                <label for="featureTrack">Track features</label>
-                                <input type="text" class="form-control" id="featureTrack" placeholder="Track features">
-                              </div>
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                            </div>
-                            
-                          </form>
-                         
-                      </div>
-                    
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="close()">Close</button>
-                  <button type="button" class="btn btn-primary" onclick="add()">Add</button>
-                </div>
-              </div>
-            </div>
-          </div>
+    
 
-                    <!-- EXERCISE 11
-            Add 2 bootstrap buttons at the bottom of the modal window:
-            - Close => clear the fields and close the modal
-            - Add => Add the track to the list of tracks in the main page and display an alert success message 
-            https://getbootstrap.com/docs/4.3/components/alerts/
-            [EXTRA] Make the message disappear after 5 seconds
-            https://www.w3schools.com/jsref/met_win_settimeout.asp
-        -->
-  
-        <!-- EXERCISE 12
-            All the field (except for Feat. and Live Track) are required fields and requires validation.
-            If the user clicks on the Add button and some fields are empty, a warning alert must be show
-        -->
-          <!-- - Track number
-          - Track name
-          - Track lenght
-          - Track featuring
-          - Live Track (checkbox) -->
-
-        <!-- EXERCISE 6
-            Add a DELETE bootstrap button on each row of the tracklist.
-            Clicking on the button the row must disappear
-
-            DONE!
-        -->
-
-
-        <!-- EXERCISE 7
-            Add a "Contact Me" form in the footer.
-            The "Contact Me" form has 2 fields:
-            - Email
-            - Text of the message
-            Use the correct Bootstrap styles for styling the buttons
-            DONE!
-        -->
- <!-- EXERCISE 15
-            Add a Album Carousel with controls to display the top 10 albums
-        -->
+                   
      
         <div class="container">
             <div class="row">
@@ -463,17 +375,15 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
           </div>
       </div>
    
-      <!-- EXERCISE 8 
-            Add to the footer an extra column with the same links of the top nav.
-        -->
-        <footer class="footer-copyright text-center p-5 bg-dark text-white"> 
+      
+        <footer class="footer-copyright text-center"> 
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="container contact-form">
-                            <form>
+                            <form style="margin-top: 100px; margin-bottom: 100px;">
                                 <div class="form-group">
-                                <h3>Contact Me</h3>
+                                <h4 class="pb-5">Contact Me</h4>
                                   <label for="exampleInputEmail1">Email address</label>
                                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> 
                                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
@@ -488,59 +398,25 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
                     
                     </div>
                 </div>
-                <div class="row pt-5">
-                    <div class="col-6">
-                        <ul class="list-unstyled text-muted">
-                            <li>My Music</li>
-                            <li>Album Gallery</li>
-                        </ul>
-                    </div>
-                    <div class="col-6">
-                        <ul class="list-unstyled text-muted">
-                            <li>Top Album</li>
-                            <li>Top singer</li>
-                        </ul>
+            
+
+            </div>
+            <div class="container-fluid" style="background-color: #000;">  
+                <div class="container">           
+                <div class="row pt-4 pb-4" style="text-align: left;">
+                    <div class="col-12"> 
+                        <small style="color: #fff;">&copy; STAYtuned</small>
                     </div>
                 </div>
-                
+            </div> 
             </div>
+           
+           
         </footer>
 
 
 
-
-         <!-- EXERCISE 9
-            Add a button "Add Track" under the track list the album
-            DONE!
-        -->
-
-        <!-- EXERCISE 10
-            On "Add Track" button, open a new modal.
-            The modal shall contain a form with:
-            - Track number
-            - Track name
-            - Track lenght
-            - Track featuring
-            - Live Track (checkbox)
-            The fields should be inside an Input Group and divided in 2 columns.
-            DONE!
-        -->
-
-      
-        <!-- EXERCISE 13
-            For each "Album cover" in your page, add a tooltip with the title
-            DONE!
-        -->
-
-        <!-- EXERCISE 14
-            Update the header and footer links using scrollspy to render a smooth transition to the parts of the document.
-        -->
-
-        
-        <!-- EXERCISE 16
-            Make every section of the page "collapsable" if the user clicks on the section title
-        -->
-
+    
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -654,36 +530,9 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
             $('[data-toggle="tooltip"]').tooltip()
             });
 
-            
-            function add() {
-                // if (numTrack == '' &&  nameTrack == '' && lengthTrack == '' &&  featureTrack == '') {
-                //     alert('Please, fill all the required filelds!');
-                //     return false;
-                // } else {
-                //     alert('Succesfully added!');
-                    
-                // }
-
-
-
-                let table = document.querySelector('.table');
-                let newRow = table.insertRow(-1); 
-                let newCell = newRow.insertCell(0);
-                let newText = document.createTextNode('new');
-                newCell.appendChild(newText);
-
-                let numTrack = document.querySelector('#numTrack').value;
-            var nameTrack = document.querySelector('#nameTrack').value;
-            let lengthTrack = document.querySelector('#lengthTrack').value;
-            let featureTrack = document.querySelector('#featureTrack').value;
            
-            let rows = '';
+
            
-            }
-
-            function close() {
-
-            }
         </script>
     </body>
 </html>
